@@ -1,0 +1,676 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: Rubik-Medium;
+    src: url(../fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+    font-family: Rubik-Regular;
+    src: url(../fonts/Rubik-Regular.ttf);
+}
+
+.container{
+    width: 1180px;
+    margin: 0 auto;
+}
+/****Шапка****/
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.header_logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100%;
+}
+
+.header__logo_name{
+    margin-left: 11.88px;
+    font-size: 20px;
+    font-family: Rubik-Medium;
+    color: #333333;
+}
+.header__search_txt{
+    width: 320px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    font-family: Rubik-Medium;
+    font-size: 16px;
+    color: #333333;
+}
+
+.header__search_txt::placeholder{
+    font-size: 16px;
+    color: #828282;
+    font-family: Rubik-Regular;
+}
+
+.header__search_txt:focus{
+    outline: none;
+}
+
+.header__search_btn{
+    background: none;
+    border: none;
+    font-family: Rubik-Medium;
+    color: #E5261E;
+    font-size: 16px;
+    margin-left: 32px;
+}
+
+.header__auth_btn {
+    width: 113px;
+    height: 38px;
+    background: #E5261E;
+    border-radius: 4px;
+    border: none;
+    font-family: Rubik-Medium;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.header__auth_btn:hover{
+    background-color: #cc221b;
+}
+
+#usernameDisplay{
+    font-size: 16px;
+    font-family: Rubik-Medium;
+    color: #333333;    
+}
+
+.header__logout_btn{
+    background: none;
+    border: none;
+    font-family: Rubik-Medium;
+    color: #E5261E;
+    font-size: 16px;
+    margin-left: 16px;
+    background-color: none;
+}
+/****Фильмы/Телеканалы****/
+.nav_ul {
+    margin-bottom: 32px;
+    width: 311px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+}
+
+.nav__ul_a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 28px;
+    font-family: Rubik-Medium;
+}
+
+.nav__ul_li {
+    list-style-type: none;
+}
+
+.nav__ul_a:hover {
+    border-bottom: #E5261E 2px solid;
+    padding-bottom: 9px;
+    color: #E5261E;
+}
+/****Фильмы****/
+.new__header{
+    font-family: Rubik-Medium;
+    font-size: 24px;
+    color: #333333;
+}
+
+.movies{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.movies__item{
+    position: relative;
+    width: 280px;
+}
+
+.movies__item_img{
+    border-radius: 8px;
+    margin: 16px 0;
+}
+
+.movies__item_title{
+    color: #333333;
+    font-size: 20px;
+    font-family: Rubik-Regular;
+}
+
+.movies__item_text{
+    width: 280px;
+    height: 370px;
+    background-color: rgba(51,51,51,0.8);
+    color: #F2F2F2;
+    line-height: 140%;
+    border-radius: 8px;
+    font-family: Rubik-Regular;
+    font-size: 16px;
+    padding: 16px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    opacity: 0;
+}
+
+.movies__item:hover .movies__item_text{
+    opacity: 1;
+}
+/****Жанры****/
+.ganres{
+    margin-top: 32px;
+}
+
+.ganres__gallery{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.ganres__item{
+    width: 280px;
+    height: 208px;
+    border-radius: 6px;
+    box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    opacity: 0.8;
+}
+
+.ganres__item:hover{
+    opacity: 1;
+}
+
+.ganres_bkg-comedy{
+    background: linear-gradient(127.83deg, #F2C94C 8.44%, #F29A4A 91.36%);
+}
+
+.ganres_bkg-drama{
+    background: linear-gradient(127.83deg, #F2994A 8.44%, #EB5757 91.36%);
+}
+
+.ganres_bkg-nlo{
+    background: linear-gradient(127.83deg, #56CCF2 8.44%, #2F80ED 91.36%);
+}
+
+.ganres_bkg-horror{
+    background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+}
+
+.ganres_emj{
+    font-size: 48px;
+    
+}
+
+.ganres__txt{
+    font-size: 20px;
+    font-family: Rubik-Regular;
+    color: #ffffff;
+    position: absolute;
+    top: 160px;
+}
+/****Телеканалы****/
+.channels{
+    background-color: #fff;
+    width: 1196px;
+    height: 696px;
+    margin-top: 27px;
+    overflow-y: auto;
+    overflow-x: hidden;
+} 
+
+::-webkit-scrollbar{
+    width: 8px;
+    margin-left: 8px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #F2F2F2;
+}
+
+::-webkit-scrollbar-thumb{
+    width: 4px;
+    height: 200px;
+    background-color: #BDBDBD;
+    border-radius: 2px; 
+    border: 2px solid  #F2F2F2; 
+    position: absolute;
+}
+
+.channel {
+    background: #F2F2F2;
+    width: 100%; 
+    height: 162px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    position: relative; 
+}
+
+.channel1, .channel2, .channel3, .channel4{
+    background: #F2F2F2;
+    width: 1180px;
+    height: 162px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.bebe{
+    background-color: #F2F2F2;
+    position: absolute;
+    margin-left: 143px;
+    margin-top: 48px; 
+    width: 114px; 
+    height: 64px;
+} 
+
+.channel__item_img1{
+    padding-left: 32.44px;
+}
+
+.channel__item_img2{
+    padding-left: 8px;
+}
+
+.channel__item_img3{
+    padding-left: 29.11px;
+    margin-top: 6px;
+}
+
+.channel__item_img4{
+    padding-left: 25px;
+}
+
+.channel__item_title{
+    font-family: Rubik-Medium;
+    font-size: 20px;
+    color: #333333;
+    position: absolute;
+    width: 280px;
+    height: 24px;
+    margin-left: 400px;
+    margin-top: 21px; 
+}
+
+.channel___item__number_red1,
+.channel__item_number2,
+.channel__item_number3,
+.channel___item__text_red1,
+.channel__item_text2,
+.channel__item_text3 {
+    font-family: Rubik-Regular;
+    font-size: 16px;
+    color: #333333;
+    position: absolute;
+}
+
+.channel___item__number_red1{
+    width: 46px;
+    height: 19px;
+    margin-left: 400px;
+    margin-top: 62px;
+}
+
+.channel__item_number2{
+    width: 46px;
+    height: 19px;
+    margin-left: 400px;
+    margin-top: 93px;
+}
+
+.channel__item_number3{
+    width: 46px;
+    height: 19px;
+    margin-left: 400px;
+    margin-top: 124px;
+}
+
+.channel___item__text_red1{
+    color: red;
+    width: 694px;
+    height: 19px;
+    margin-left: 462px;
+    margin-top: 62px;
+}
+
+.channel__item_text2, .channel__item_text3{
+    width: 694px;
+    height: 19px;
+    margin-left: 462px;
+}
+
+.channel__item_text2{
+    margin-top: 93px;
+}
+
+.channel__item_text3{
+    margin-top: 124px;
+}
+/****Подвал****/
+.footer{
+    background-color: #f2f2f2;
+    height: 120px;
+    margin-top: 72px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__container{
+    display: flex;
+}
+
+.footer__img{
+    margin-right: 39.98px;
+    height: 64px;
+}
+
+.footer__info_p{
+    font-family: Rubik-Regular;
+    font-size: 16px;
+    color: #333333;
+}
+
+.footer__nomer{
+    margin: 6px 0 10px 0;
+}
+
+.footer__info_a{
+    text-decoration: none;
+    color: #1F4766;
+    font-family: Rubik-Medium;
+    font-size: 16px;
+}
+
+@media (max-width: 390px ) {
+.container{
+    width: 390px;
+    margin-left:30px;
+}
+/****Шапка****/
+.header{
+    width:331px;
+    height: 15px;
+    margin-top: 15px;
+}
+    
+.header_logo{
+    width: 15px;
+    height: 76px;
+}
+    
+.logo{
+    width: 100%;
+}
+    
+.header__logo_name{
+    margin-left: 4.96px;
+    font-size: 8px;
+}
+    
+.header__search_txt{
+    width: 100px;  
+    font-size: 6px;
+    margin-left: 42px;
+}
+    
+.header__search_txt::placeholder{
+    font-size: 6px;
+}
+    
+.header__search_btn{
+    font-size: 6px;
+    margin-left: 7px;
+}
+    
+.header__auth_btn {
+    width: 41px;
+    height: 15px;
+    font-size: 6px;
+}
+ 
+#usernameDisplay{
+    font-size: 6px;   
+}
+    
+.header__logout_btn{
+    font-size: 6px;
+}      
+    
+.header__auth_btn:hover{
+    background-color: #cc221b;
+}
+
+/****Фильмы/Телеканалы****/
+.nav_ul {
+    width: 147px;
+    margin-top: 8px;
+    margin-left: 95px;
+}
+
+.nav__ul_a {
+    font-size: 14px;
+}
+
+.nav__ul_li {
+    padding-left: 3px;
+}
+
+.nav__ul_a:hover {
+    border-bottom: #E5261E 2px solid;
+    padding-bottom: 2px;
+    color: #E5261E;
+}
+/****Фильмы****/
+.new{
+    margin:0 auto;    
+}
+
+.new__header{
+    font-size: 12px;
+}
+
+.movies{
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+}
+
+.movies__item{
+    flex: 0 1 calc(50% - 30px);
+    margin-top: 12px;
+}
+
+.movies__item_img{
+    width: 150px;
+    height: 171px;
+    margin: 0 auto;
+}
+
+.movies__item_title{
+    font-size: 10px;
+    height: 24px;
+    margin-top: 7.37px;
+    width: 150px;
+}
+
+.movies__item_text{
+    width: 150px;
+    height: 171px;
+    font-size: 8px;
+    top:0px;
+}
+/****Жанры****/
+.ganres{
+    margin:0 auto;         
+}
+
+.ganres__gallery{
+    margin-top: 12px;
+    width: 330px;
+}
+
+.ganres__item{
+    width: 150px;
+    height: 150px;
+    flex: 0 1 calc(50% - 15px);
+    margin-bottom: 12px;
+}
+
+.ganres__item:hover{
+    opacity: 1;
+}
+
+.ganres_emj{
+    font-size: 48px;    
+}
+
+.ganres__txt{
+    font-size: 18px;
+    top: 111px;
+}
+/****Телеканалы****/
+.channels{
+    width: 337px;
+    height: 690px;
+    margin-top: 30px;
+} 
+.channel1, .channel2, .channel3, .channel4{
+    width: 300px;
+    height: 150px;
+    margin-bottom: 30px;
+}
+
+.bebe{
+    margin: 0 auto;
+} 
+
+.ch{
+    width: 100%;
+}
+
+.channel__item_img1{
+    width: 30px;
+    height: 40px;
+    margin-top: 49px; 
+}
+
+.channel__item_img2{
+    width: 43.28px;
+    height: 20px;
+    margin-top: 65px; 
+    margin-left: 15px;
+}
+
+.channel__item_img3{
+    width: 37.2px;
+    height: 40px;
+    margin-top: 55px; 
+}
+
+.channel__item_img4{
+    width: 37.2px;
+    height: 40px;
+    margin-top: 55px; 
+}
+
+.channel__item_title{
+    font-size: 12px;
+    width: 280px;
+    height: 14px;
+    margin-left: 87px;
+    margin-top: 26px; 
+}
+.channel___item__number_red1{
+    font-size: 10px;
+    width: 26px;
+    height: 12px;
+    margin-left: 88px;
+    margin-top: 62px;
+}
+
+.channel__item_number2{
+    font-size: 10px;
+    width: 26px;
+    height: 12px;
+    margin-left: 88px;
+    margin-top: 93px;
+}
+
+.channel__item_number3{
+    font-size: 10px;
+    width: 26px;
+    height: 12px;
+    margin-left: 88px;
+    margin-top: 124px;
+}
+
+
+.channel___item__text_red1{
+    font-size: 10px;
+    width: 150px;
+    height: 12px;
+    margin-left: 118px;
+    margin-top: 62px;
+}
+
+.channel__item_text2{
+    font-size: 10px;
+    width: 150px;
+    height: 12px;
+    margin-left: 118px;
+    margin-top: 93px;
+}
+
+.channel__item_text3{
+    font-size: 10px;
+    width: 150px;
+    height: 19px;
+    margin-left: 118px;
+    margin-top: 124px;
+}
+/****Подвал****/
+.footer{
+    height: 54px;
+    margin-top: 12px;
+    padding-top: 13px;
+}
+
+.footer__img{
+    margin-right: 17px;
+    height: 28px;
+}
+
+.footer__info_p{
+    font-size: 6px;
+}
+
+.footer__nomer{
+    margin: 5px 0 5px 0;
+}
+
+.footer__info_a{
+    font-size: 6px;
+}
+}

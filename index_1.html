@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2_3.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+        <div class="container">
+            <header class="header">
+                <div class="header_logo">
+                    <img class="logo" src="img/logo.png" alt="logo">
+                    <p class="header__logo_name">Видеосервис</p>
+                </div>
+                <form class="header_search">
+                    <input class="header__search_txt" type="text" placeholder="Поиск...">
+                    <input class="header__search_btn" type="button" value="Найти">
+                </form>
+                <div class="header_auth">
+                    <span id="usernameDisplay" style="display:none;"></span>
+                    <button class="header__auth_btn" id="loginBtn">Войти</button>
+                    <button class="header__logout_btn" id="logoutBtn" style="display:none;">Выйти</button>
+                </div>
+                <div id="overlay" class="overlay" style="display: none;"></div>
+                <div id="loginModal" class="modal" style="display: none;">
+                    <div class="form">
+                        <h1>Вход</h1>
+                        <input class="log" type="text" id="login" name="login" placeholder="Логин" required>
+                        <input class="pass" type="password" id="password" name="password" placeholder="Пароль" required>
+                        <div class="save">
+                            <input type="checkbox" name="save" value="true">
+                            <label>Запомнить</label>
+                        </div>
+                        <button class="submit" type="button" id="submit">Войти</button>
+                    </div>
+                </div>
+            </header>
+            <main>
+            <nav>
+                <ul class="nav_ul">
+                    <li class="nav__ul_li"><a class="nav__ul_a" href="index_1.html">Фильмы</a></li>
+                    <li class="nav__ul_li"><a class="nav__ul_a" href="index_2.html">Телеканалы</a></li>
+                </ul>
+            </nav>
+            <div class="new">
+                <p class="new__header">🔥Новинки</p>
+                    <div class="movies">
+                        <div class="movies__item">
+                            <img class="movies__item_img" src="img/1cat.png" alt="cat">
+                            <p class="movies__item_title">Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                            <p class="movies__item_text">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                        </div>
+                        <div class="movies__item">
+                            <img class="movies__item_img" src="img/2batmen.png" alt="batmen">
+                            <p class="movies__item_title">Новый Бэтмен</p>
+                            <p class="movies__item_text">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                        </div>
+                        <div class="movies__item">
+                            <img class="movies__item_img" src="img/3hollywood.png" alt="hollywood">
+                            <p class="movies__item_title">Однажды... в Голливуде</p>
+                            <p class="movies__item_text">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                        </div>
+                        <div class="movies__item">
+                            <img class="movies__item_img" src="img/4girl.png" alt="girl">
+                            <p class="movies__item_title">Стриптизёрши</p>
+                            <p class="movies__item_text">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="ganres">
+                    <p class="new__header">Жанры</p>
+                    <div class="ganres__gallery">
+                        <div class="ganres__item ganres_bkg-comedy">
+                            <p class="ganres_emj">😁</p>
+                            <p class="ganres__txt">Комедии</p>
+                        </div>
+                        <div class="ganres__item ganres_bkg-drama">
+                            <p class="ganres_emj">😭</p>
+                            <p class="ganres__txt">Драмы</p>
+                        </div>
+                        <div class="ganres__item ganres_bkg-nlo">
+                            <p class="ganres_emj">👽</p>
+                            <p class="ganres__txt">Фантастика</p>
+                        </div>
+                        <div class="ganres__item ganres_bkg-horror">
+                            <p class="ganres_emj">👻</p>
+                            <p class="ganres__txt">Ужасы</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer class="footer">
+            <div class="container footer__container">
+                <img class="footer__img" src="img/people.png" alt="logo">
+                <div class="footer__info">
+                    <p class="footer__info_p">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+                    <p class="footer__info_p footer__nomer">+7 (3412) 93-88-61, 43-29-29</p>
+                    <a class="footer__info_a" href="https://htc-cs.ru">htc-cs.ru</a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

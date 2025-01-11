@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телеканалы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2_3.css">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header_logo">
+                <img class="logo" src="img/logo.png" alt="logo">
+                <p class="header__logo_name">Видеосервис</p>
+            </div>
+            <form class="header_search">
+                <input class="header__search_txt" type="text" placeholder="Поиск...">
+                <input class="header__search_btn" type="button" value="Найти">
+            </form>
+            <div class="header_auth">
+                <span id="usernameDisplay" style="display:none;"></span>
+                <button class="header__auth_btn" id="loginBtn">Войти</button>
+                <button class="header__logout_btn" id="logoutBtn" style="display:none;">Выйти</button>
+            </div>
+            <div id="overlay" class="overlay" style="display: none;"></div>
+            <div id="loginModal" class="modal" style="display: none;">
+                <div class="form">
+                    <h1>Вход</h1>
+                    <input class="log" type="text" id="login" name="login" placeholder="Логин" required>
+                    <input class="pass" type="password" id="password" name="password" placeholder="Пароль" required>
+                    <div class="save">
+                        <input type="checkbox" name="save" value="true">
+                        <label>Запомнить</label>
+                    </div>
+                    <button class="submit" type="button" id="submit">Войти</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <nav>
+            <ul class="nav_ul">
+                <li class="nav__ul_li"><a class="nav__ul_a" href="index_1.html">Фильмы</a></li>
+                <li class="nav__ul_li"><a class="nav__ul_a" href="index_2.html">Телеканалы</a></li>
+            </ul>
+            </nav>
+            <div class="channels">
+    <div class="channel channel1">
+        <div class="bebe">
+            <img class="ch channel__item_img1" src="img/1st.png" alt="logo1">
+        </div>
+        <p class="channel__item_title">Первый канал</p>
+        <p class="channel___item__number_red1">13:00</p>
+        <p class="channel__item_number2">14:00</p>
+        <p class="channel__item_number3">15:00</p>
+        <p class="channel___item__text_red1">Новости(с субтитрами)</p>
+        <p class="channel__item_text2">Давай поженимся</p>
+        <p class="channel__item_text3">Другие новости</p>
+    </div>
+    <div class="channel channel2">
+        <div class="bebe">
+            <img class="ch channel__item_img2" src="img/2x2.png" alt="logo2">
+        </div>
+        <p class="channel__item_title">2х2</p>
+        <p class="channel___item__number_red1">13:00</p>
+        <p class="channel__item_number2">14:00</p>
+        <p class="channel__item_number3">15:00</p>
+        <p class="channel___item__text_red1">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+        <p class="channel__item_text2">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезонн 7, 7 серия</p>
+        <p class="channel__item_text3">БУРДАШЕВ. Сезон 1, 20 серия</p>
+    </div>
+    <div class="channel channel3">
+        <div class="bebe">
+            <img class="ch channel__item_img3" src="img/three.png" alt="logo3">
+        </div>
+        <p class="channel__item_title">РБК</p>
+        <p class="channel___item__number_red1">13:00</p>
+        <p class="channel__item_number2">14:00</p>
+        <p class="channel__item_number3">15:00</p>
+        <p class="channel___item__text_red1">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+        <p class="channel__item_text2">ДЕНЬ. Главные темы</p>
+        <p class="channel__item_text3">Главные новости</p> 
+    </div>
+    <div class="channel channel4">
+        <div class="bebe">
+            <img class="ch channel__item_img4" src="img/A.png" alt="logo4">
+        </div>
+        <p class="channel__item_title">AMEDIA PREMIUM</p>
+        <p class="channel___item__number_red1">13:00</p>
+        <p class="channel__item_number2">14:00</p>
+        <p class="channel__item_number3">15:00</p>
+        <p class="channel___item__text_red1">Клиент всегда мёртв</p>
+        <p class="channel__item_text2">Голодные игры: Сойка-пересмешница. Часть I</p>
+        <p class="channel__item_text3">Секс в большом городе</p>  
+    </div>
+</div>
+        </main>
+    </div>
+        <footer class="footer">
+            <div class="container footer__container">
+                <img class="footer__img" src="img/people.png" alt="logo">
+                <div class="footer__info">
+                    <p class="footer__info_p">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+                    <p class="footer__info_p footer__nomer">+7 (3412) 93-88-61, 43-29-29</p>
+                    <a class="footer__info_a" href="https://htc-cs.ru">htc-cs.ru</a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
